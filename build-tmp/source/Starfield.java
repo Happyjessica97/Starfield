@@ -1,7 +1,23 @@
+import processing.core.*; 
+import processing.data.*; 
+import processing.event.*; 
+import processing.opengl.*; 
+
+import java.util.HashMap; 
+import java.util.ArrayList; 
+import java.io.File; 
+import java.io.BufferedReader; 
+import java.io.PrintWriter; 
+import java.io.InputStream; 
+import java.io.OutputStream; 
+import java.io.IOException; 
+
+public class Starfield extends PApplet {
+
 //your code here
 Particle [] group;
 
-void setup()
+public void setup()
 { //your code here
 //background(0);
 	size(600,600);
@@ -13,7 +29,7 @@ void setup()
 	}
 
 }
-void draw()
+public void draw()
 {	background(0);
 	//background(255, 0, 128);
 	//fill(0,0,0);
@@ -34,8 +50,8 @@ class NormalParticle implements Particle
 	//boolean work = true;
 	NormalParticle(){
 		
-		myX = 240.35;
-		myY = 240.35;
+		myX = 240.35f;
+		myY = 240.35f;
 		myColor1 = (int)(Math.random()*401);
 		myColor2 = (int)(Math.random()*401);
 		myColor3 = (int)(Math.random()*401);
@@ -85,8 +101,8 @@ class OddballParticle implements Particle
 	double myX2,myY2, mySpeed2, myAngle2;
 	int myColor12,myColor22,myColor32;
 	OddballParticle(){
-		myX2 = 240.35;
-		myY2 = 240.35;
+		myX2 = 240.35f;
+		myY2 = 240.35f;
 		myColor12 = (int)(Math.random()*401);
 		myColor22 = (int)(Math.random()*401);
 		myColor32 = (int)(Math.random()*401);
@@ -113,3 +129,12 @@ interface Particle
 }
 
 
+  static public void main(String[] passedArgs) {
+    String[] appletArgs = new String[] { "Starfield" };
+    if (passedArgs != null) {
+      PApplet.main(concat(appletArgs, passedArgs));
+    } else {
+      PApplet.main(appletArgs);
+    }
+  }
+}
