@@ -96,7 +96,7 @@ class OddballParticle implements Particle
 } public void move(){
 	myX2 = (Math.cos(myAngle2) * mySpeed2)+ myX2;
 	myY2 = (Math.sin(myAngle2) * mySpeed2)+ myY2;
-	if((myX2 >= 600)&&(myX2 <= 0)&&(myY2 <= 0)&&(myY2 >= 600)){
+	if((myX2 >= 600)||(myX2 <= 0)||(myY2 <= 0)||(myY2 >= 600)){
 		myX2 = 300.00;
 		myY2 =300.00;
 	}
