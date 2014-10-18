@@ -34,8 +34,8 @@ class NormalParticle implements Particle
 	//boolean work = true;
 	NormalParticle(){
 		
-		myX = 240.35;
-		myY = 240.35;
+		myX = 300.00;
+		myY = 300.00;
 		myColor1 = (int)(Math.random()*401);
 		myColor2 = (int)(Math.random()*401);
 		myColor3 = (int)(Math.random()*401);
@@ -99,7 +99,7 @@ class OddballParticle implements Particle
 	
 
 } public void show(){
-	fill(myColor12,myColor22,myColor32);
+	fill(255,255,255);
 	ellipse((float)myX2,(float)myY2,50,50);
 }
 }
